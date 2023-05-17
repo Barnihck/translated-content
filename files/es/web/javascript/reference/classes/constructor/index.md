@@ -82,3 +82,37 @@ constructor(...args) {
 - [`class` expression](/es/docs/Web/JavaScript/Reference/Operators/class)
 - [`class` declaration](/es/docs/Web/JavaScript/Reference/Statements/class)
 - [Classes](/es/docs/Web/JavaScript/Reference/Classes)
+
+class Square extends Polygon {
+
+  constructor(length) {
+
+    // Aquí, llama al constructor de la clase padre con sus longitudes
+
+    // contemplando la anchura y la altura del Polígono
+
+    super(length, length);
+
+    // Nota: En las clases derivadas, super() se debe llamar primero
+
+    // Se puede utilizar "this". Dejando esto causará un error de
+
+    //referencia.
+
+    this.name = 'Square';
+
+  }
+
+  get area() {
+
+    return this.height * this.width;
+
+  }
+
+  set area(value) {
+
+    this.area = value;
+
+  }
+
+}
